@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; } 
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; } 
+h1, h2, h3, h4, h5, h6{ font-size:100%; } 
+address, cite, dfn, em, var { font-style:normal; } 
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; } 
+small{ font-size:12px; } 
+ul, ol{ list-style:none; } 
+
+a:hover { text-decoration:underline; }
+a { text-decoration:none; } 
+sup { vertical-align:text-top; } 
+sub{ vertical-align:text-bottom; } 
+legend { color:#000; } 
+fieldset, img { border:0; } 
+button, input, select, textarea { font-size:100%; } 
+table { border-collapse:collapse; border-spacing:0; }
+	</style>
+	<style>
+		body{
+			background-color: #f2f4f8;
+		}
+		header{
+			height: 70px;
+			background-color: #ffffff;
+			border-top: 1px solid #b6b4b6;
+			box-shadow:2px 2px 2px #e6e8eb;
+		}
+		nav{
+			width: 1100px;
+			height: 70px;
+			/*background-color: green;*/
+			margin: 0 auto;
+		}
+		nav>h1{
+			float: left;
+			margin-top: 15px;
+		}
+		.container {
+			width: 400px;
+			height: 30px;
+			float: left;
+			position: relative;
+			top: 20px;
+			left: 30px;
+		}
+		.parent {
+			width: 100%;
+			height: 22px;
+			top: 4px;
+			position: relative;
+		}
+		.parent>input:first-of-type {
+			width: 380px;
+			height: 22px; 
+			border: 1px solid #ccc;
+			font-size: 12px;
+			outline: none;
+		}
+		.parent>input:last-of-type {
+			/*width: 30px;*/
+			/*height: 24px; */
+			position: absolute;
+			background: #317ef3;
+			border: 1px solid #317ef3;
+			color: #fff;
+			font-size: 12px;
+			outline: none;
+		}
+		.nav1 li{
+			float: right;
+			padding: 0 5px;
+		}
+		.nav1 ul{
+			margin-right: 40px;
+			line-height: 70px;
+		}
+		.nav1 a{
+			color: #333333;
+			font-size: 12px;
+		}
+		.detail{
+			width: 1100px;
+			height: 180px;
+			background-color: #ffffff;
+			margin: 0 auto;
+		}
+		.detail1{
+			height: 30px;
+			width: 1020px;
+			margin: 0 auto;
+			/*background-color: blue;*/
+			position: relative;
+			top: 10px;
+		}
+		h1{
+			float: left;
+		}
+		.detail11{
+			height: 20px;
+			width: 65px;
+			background-color: #317ef3;
+			float: left;
+			padding: 2px 8px;
+			box-sizing: border-box;
+			font-size: 12px;
+			color: white;
+			margin-left: 20px;
+		}
+		.detail2{
+			float: right;
+			width: 40px;
+			height: 20px;
+			/*background-color: purple;*/
+			position: relative;
+			right: 65px;
+		}
+		.icon{
+			width: 12px;
+			float: left;
+		}
+		.icon img{
+			width: 100%;
+		}
+		.font{
+			float: right;
+			color: #317ef3;
+			font-size: 12px;
+			margin-top: 2px;
+		}
+		.detail21{
+			float: right;
+			width: 40px;
+			height: 20px;
+			/*background-color: purple;*/
+			position: relative;
+			right: -40px;
+		}
+		.icon1{
+			width: 12px;
+			float: left;
+		}
+		.icon1 img{
+			width: 100%;
+		}
+		.font1{
+			float: right;
+			color: #398bfb;
+			font-size: 12px;
+			margin-top: 2px;
+		}
+		.detail3{
+			margin: 0 auto;
+			height: 120px;
+			width: 1020px;
+			/*background-color: green;*/
+			position: relative;
+			top: 25px;
+		}
+		.detail3>img{
+			float: left;
+		}
+		.detail3>p{
+			float: left;
+			position: relative;
+			left: 20px;
+			background-color: #eff9f1;
+			color: #398bfb;
+			padding: 5px 10px;
+			font-size: 12px;
+		}
+		.detail31{
+			float: left;
+			position: relative;
+			left: 20px;
+			top: 10px;
+		}
+		.detail31 li,a{
+			font-size: 12px;
+			line-height: 20px;
+		}
+		.detail31 li a{
+			color: #398bfb;
+		}
+		.detail li{
+			font-size: 12px;
+			line-height: 20px;
+		}
+		.detail311{
+			margin-right: 20px;
+			float: left;
+			position: relative;
+			top: -50px;
+			left: 330px;
+		}
+		article{
+			width: 1100px;
+			margin: 0 auto;
+			/*background-color: red;*/
+			height: 1200px;
+			position: relative;
+			top: 20px;
+		}
+		#articlel{
+			float: left;
+			width: 777px;
+			background-color: #eeeeee;
+			/*height: 600px;*/
+
+		}
+		#articler{
+			float: right;
+			width: 300px;
+			/*height: 800px;*/
+			background-color: #eeeeee;
+		}
+		#article1 li{
+			float: left;
+			padding: 10px 26px;
+			background-color: #fbfbfb;
+			margin-left: 1px;
+
+		}
+		span{
+			color: grey;
+			font-size: 12px;
+			position: relative;
+			left: 5px;
+		}
+		#article2{
+			width: 777px;
+			height: 70px;
+			background-color: #ffffff;
+			margin-top: 43px;
+		}
+		#article2 li{
+			float: left;
+			text-align: center;
+			line-height: 20px;
+			background-color: #ffffff;
+			width: 75px;
+			height: 20px;
+			margin: 5px;
+			font-size: 12px;
+			border: 1px solid #eeeeee;
+		}
+		#article2 ul{
+			margin-left: 20px;
+			position: relative;
+			top: 20px;
+		}
+		#article3{
+			width: 777px;
+			height: 400px;
+			background-color: #ffffff;
+			margin-top: 2px;
+		}
+		#article3>h1{
+			margin-left: 20px;
+			margin-top: 30px;
+			color: #333333;
+		}
+		table{
+			position: relative;
+			top: 20px;
+			left: 20px;
+			width: 740px;
+			height: 300px;
+		}
+		table,th{
+			border: 1px solid #eeeeee;
+		}
+		th{
+			text-align: left;
+			padding: 10px;
+			width: 300px;
+			height: 20px;
+			font-size: 12px;
+			color: #333333;
+		}
+		.article33{
+			background-color: #f5f9ff;
+		}
+		#articler>h1{
+			margin-top: 1px;
+			margin-left: 1px;
+			width: 298px;
+			height: 60px;
+			background-color: #f6f8fa;
+			line-height: 60px;
+			padding-left: 20px;
+			box-sizing: border-box;
+		}
+		.articler1{
+			margin-top: 62px;
+			margin-left: 1px;
+			width: 298px;
+			background-color: #ffffff;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			font-size: 12px;
+			color: #666666;
+		}
+		.articler11>h1{
+			margin-top: 1px;
+			margin-left: 1px;
+			width: 298px;
+			height: 60px;
+			background-color: #f6f8fa;
+			line-height: 60px;
+			padding-left: 20px;
+			box-sizing: border-box;
+		}
+		.articler111{
+			margin-top: 62px;
+			margin-left: 1px;
+			width: 298px;
+			background-color: #ffffff;
+			height: 230px;
+			text-align: center;
+			font-size: 12px;
+			color: #666666;
+		}
+		.articler111 li{
+			border-bottom: 1px solid #eeeeee;
+			height: 45px;
+			width: 250px;
+			margin: 0 auto;
+		}
+		.articler111 li a{
+			float: left;
+			line-height: 40px;
+			color: #666666;
+		}
+		.articler12>h1{
+			margin-top: 1px;
+			margin-left: 1px;
+			width: 298px;
+			height: 60px;
+			background-color: #f6f8fa;
+			line-height: 60px;
+			padding-left: 20px;
+			box-sizing: border-box;
+		}
+		.articler13{
+			margin-top: 62px;
+			margin-left: 1px;
+			width: 298px;
+			background-color: #ffffff;
+			height: 45px;
+			padding-left: 20px;
+			line-height: 45px;
+			font-size: 12px;
+			color: #666666;
+			box-sizing: border-box;
+		}
+	</style>
+	<style>
+		header{
+			position: fixed;
+			width: 100%;
+			background: #fff;
+			z-index: 100;
+		}
+		.content{
+			position: relative;
+			top: 71px;
+		}
+		.button{
+			margin-left: 10px;
+			padding: 4px 10px 4px 10px;
+			box-sizing: border-box;
+		}
+		.input{
+			padding: 2px 0 2px 10px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<h1>
+				<img src="./logo.png" style="height: 30px; width: 200px;">
+			</h1>
+			<div class="container">
+    			<form action="" class="parent">
+        			<input type="text" placeholder="请输入想查询的内容" class="input">
+        			<input type="button" value="搜索" class="button">
+    			</form>
+			</div>
+			<div class="nav1">
+				<ul>
+					<li><a href="#">退出</a></li>
+					<li><a href="#">|</a></li>
+					<li><a href="#">奈_______er</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div class="content">
+		<div class="detail">
+			<div class="detail1">
+				<h1>小米科技有限责任公司</h1>
+				<div class="detail11">
+					认领企业
+				</div>
+				<div class="detail2">
+					<div class="icon"><img src="./guanzhu.png"></div>
+					<div class="font">关注</div>
+				</div>
+				<div class="detail21">
+					<div class="icon1"><img src="./share.png"></div>
+					<div class="font1">分享</div>
+				</div>
+			</div>
+			<div class="detail3">
+				<img src="./xiaomi.jpg" style="height: 100px;">
+				<p>A级纳税人(2016)</p>
+				<div class="detail31">
+					<ul>
+						<li>电话：6060***-1000</li>
+						<li>官网：<a href="#">www.mi.com</a></li>
+						<li>简介：小米科技有限责任公司成立于2010年03月03日，注册地位于北京市海淀区清河中街68号华润五彩城购物中心二期13层，法人代表为雷军。经...&nbsp;&nbsp;<a href="#">展开</a></li>
+					</ul>
+				</div>
+				<div class="detail311">
+					<ul>
+						<li>邮箱：chenghongwei@xiaomi.com</li>
+						<li>地址：北京市海淀区清河中街68号华润五彩城购物中心二期13层</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<article>
+			<div id="articlel">
+				<div id="article1">
+					<ul>
+						<li>基本信息</li>
+						<li>风险提示<span>100+</span></li>
+						<li>知识产权<span>100+</span></li>
+						<li>经营状况<span>35</span></li>
+						<li>数据解读</li>
+						<li>新闻资讯</li>
+					</ul>
+				</div>
+				<div id="article2">
+					<ul>
+						<li>工商注册</li>
+						<li>股东信息4</li>
+						<li>主要人员5</li>
+						<li>对外投资13</li>
+						<li>变更记录25</li>
+						<li>企业年报6</li>
+						<li>分支机构18</li>
+					</ul>
+				</div>
+				<div id="article3">
+					<h1>工商注册</h1>
+					<table>
+						<tr>
+							<th class="article33">注册资本</th>
+							<th>185,000万(元)</th>
+							<th class="article33">实缴资本</th>
+							<th>-</th>
+						</tr>
+						<tr>
+							<th class="article33">法定代表人</th>
+							<th>雷军</th>
+							<th class="article33">经营状态</th>
+							<th>开业</th>
+						</tr>
+						<tr>
+							<th class="article33">曾用名</th>
+							<th>-</th>
+							<th class="article33">所属行业</th>
+							<th>其他科技推广服务业</th>
+						</tr>
+						<tr>
+							<th class="article33">统一社会信用代码</th>
+							<th>91110108551385082Q</th>
+							<th class="article33">纳税人识别号</th>
+							<th>91110108551385082Q</th>
+						</tr>
+						<tr>
+							<th class="article33">工商注册号</th>
+							<th>110108012660422</th>
+							<th class="article33">组织机构代码</th>
+							<th>55138508-2</th>
+						</tr>
+						<tr>
+							<th class="article33">登记机关</th>
+							<th>北京市工商行政管理局海淀分局</th>
+							<th class="article33">成立日期</th>
+							<th>2010-03-03</th>
+						</tr>
+						<tr>
+							<th class="article33">企业类型</th>
+							<th>有限责任公司(自然人投资或控股)</th>
+							<th class="article33">营业期限</th>
+							<th>2010-03-03 至 2030-03-02</th>
+						</tr>
+						<tr>
+							<th class="article33">行政区划</th>
+							<th>北京市海淀区</th>
+							<th class="article33">审核/年检日期</th>
+							<th>2018-06-20</th>
+						</tr>
+					</table>
+				</div>
+
+			</div>
+			<div id="articler">
+				<h1>最新资讯</h1>
+				<div class="articler1">暂无记录</div>
+				<h1 class="articler11">您可能感兴趣的企业</h1>
+				<div class="articler111">
+					<ul>
+						<li><a href="#">北京市九州风神科技有限公司</a></li>
+						<li><a href="#">中冶天工集团有限公司</a></li>
+						<li><a href="#">济南巴克超声波科技有限公司</a></li>
+						<li><a href="#">华仪集团有限公司</a></li>
+						<li><a href="#">福建省新威电子工业有限公司</a></li>
+					</ul>
+				</div>
+				<h1 class="articler12">浏览历史</h1>
+				<div class="articler13">小米科技责任有限公司</div>
+			</div>
+		</article>
+	</div>
+
+</body>
+</html>

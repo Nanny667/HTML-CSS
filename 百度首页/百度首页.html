@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>百度首页</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			background: url('images/body.jpg') no-repeat center 0;
+		}
+		#nav{
+			width: 100%;
+			height: 30px;
+			border-bottom: 1px solid #ccc;
+			position: fixed;
+		}
+		#nav>.nav_left{
+			float: left;
+			height: 31px;
+			width: 240px;
+			line-height: 31px;
+			display: flex;
+			justify-content: space-around;
+			font-size: 12px;
+		}
+		.no_deration{
+			text-decoration: none;
+		}
+		.nav_left>a,.nav_right>a{
+			color: white;
+		}
+		.nav_left>a:nth-child(2){
+			background: url("https://dss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/weather/aladdin/png_18/a1.png") no-repeat left center;
+			padding-left: 20px;
+			padding-bottom: 20px;
+		}
+		.nav_left .blue{
+			color: blue;
+			font-size: 13px;
+			font-weight: bold;
+		}
+		#nav>.nav_right{
+			float: right;
+			height: 31px;
+			width: 600px;
+			line-height: 31px;
+			display: flex;
+			justify-content: space-between;
+		}
+		.nav_right .a_bold{
+			font-weight: bold;
+		}
+		.nav_right .pro{
+			height: 100%;
+			width: 86px;
+			background-color: cornflowerblue;
+			text-align: center;
+			color: white;
+		}
+		h1{
+			text-align: center;
+		}
+		.search{
+			width: 584px;
+			height: 40px;
+			background-color: white;
+			margin: 0 auto;
+		}
+		.search>.input_baidu{
+			width: 480px;
+			height: 40px;
+			float: left;
+			box-sizing: border-box;
+			position: absolute;
+		}
+		.input_baidu>.text_baidu{
+			height: 20px;
+			width: 420px;
+			border: none;
+			outline: none;
+			position: absolute;
+			top: 10px;
+			left: 6px;
+		}
+		.search>.btn{
+			width: 104px;
+			height: 40px;
+			background-color: cornflowerblue;
+			border: none;
+			float: right;
+			color: white;
+			font-size: 16px;
+		}
+		.search_img{
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+		.content{
+			width: 843px;
+			height: 548px;
+			background-color: white;
+			margin: 70px auto;
+			border: 1px solid #ccc;
+		}
+		.content>.content_top{
+			width: 100%;
+			height: 38px;
+			background-color: white;
+			border-bottom: 1px solid #ccc;
+		}
+		.content_top_1{
+			float: left;
+		}
+		.content_top_1>.tab{
+			list-style: none;
+		}
+		.content_top_1>.tab>li{
+			float: left;
+		}
+		.content_top_1>.tab>li>a{
+			color: #333;
+			text-decoration: none;
+			display: inline-block;
+			padding: 0 25px;
+			line-height: 39px;
+		}
+		.content_top_1>.tab>li>a:hover{
+			background-color: #b3b6bb!important;
+		}
+		.active{
+			background-color: #9a9da2!important;
+		}
+		.content_top_2{
+			float: right;
+			width: 30px;
+			height: 39px;
+			background: url("images/set.png") no-repeat center center;
+		}
+		.content_left{
+			width: 538px;
+			float: left;
+			margin-left: 25px;
+		}
+		.content_left>ul{
+			width: 538px;
+			list-style: none;
+		}
+		.content_left>ul>li{
+			width: 538px;
+			line-height: 35px;
+			border-bottom: 1px solid #ccc;
+			box-sizing: border-box;
+			padding: 20px 0 0 0;
+		}
+		.content_left>ul>li>a{
+			color: #666;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		.content_left>ul>li>a:hover{
+			text-decoration-line: underline;
+			color: blue;
+		}
+		.content_left>ul>li>p{
+			color: #cccccc;
+			margin-bottom: 20px;
+		}
+		.content_right{
+			width: 270px;
+			background-color: white;
+			float: right;
+		}
+		.content_right>h3{
+			text-align: center;
+			margin-top: 20px;
+		}
+		.content_right>.new_right{
+			width: 250px;
+			height: 272px;
+			background-color: white;
+			margin: 10px auto;
+			list-style: none;
+		}
+		.content_right>.new_right>li{
+			line-height: 35px;
+			font-size: 13px;
+			float: left;
+			margin-left: 13px;
+		}
+		.content_right>.new_right>li>a{
+			color: #666;
+			text-decoration: none;
+		}
+		.content_right>.new_right>li>a:hover{
+			text-decoration-line: underline;
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+<!--导航部分-->
+<div id="nav">
+	<div class="nav_left">
+		<a href="#" class="no_deration">汕头:</a>
+		<a href="#" class="no_deration">20℃</a>
+		<a href="#" class="blue">优</a>
+		<a href="#" class="no_deration">29</a>
+		<span>|</span>
+		<a href="#">换肤</a>
+		<a href="#">消息</a>
+	</div>
+	<div class="nav_right">
+		<a href="#" class="a_bold">新闻</a>
+		<a href="#" class="a_bold">hao123</a>
+		<a href="#" class="a_bold">地图</a>
+		<a href="#" class="a_bold">视频</a>
+		<a href="#" class="a_bold">贴吧</a>
+		<a href="#" class="a_bold">学术</a>
+		<a href="#">琉璃7048</a>
+		<a href="#">设置</a>
+		<div class="pro">更多产品</div>
+	</div>
+</div>
+<!--LOGO部分-->
+<h1>
+	<img src="images/logo.png" alt="" width="270" height="129">
+</h1>
+<!--百度一下部分-->
+<div class="search">
+	<div class="input_baidu">
+		<input type="text" class="text_baidu">
+		<img src="images/search.png" alt="" class="search_img">
+	</div>
+	<button class="btn">百度一下</button>
+</div>
+<!--内容部分-->
+<div class="content">
+	<div class="content_top">
+		<div class="content_top_1">
+			<ul class="tab">
+				<li><a href="javascript:;">我的关注</a></li>
+				<li><a href="javascript:;" class="active">推荐</a></li>
+				<li><a href="javascript:;">导航</a></li>
+			</ul>
+		</div>
+		<a href="iavascript:;" class="content_top_2"></a>
+	</div>
+    <div class="content_left">
+		<ul class="news">
+			<li>
+				<a href="javascript:;">国家税务总局：3月份纳税申报期限向后延长一周至23日</a>
+				<p>澎湃新闻&nbsp;&nbsp;&nbsp;&nbsp;03-03 17:26</p>
+			</li>
+			<li>
+				<a href="javascript:;">国家税务总局：3月份纳税申报期限向后延长一周至23日</a>
+				<p>澎湃新闻&nbsp;&nbsp;&nbsp;&nbsp;03-03 17:26</p>
+			</li>
+			<li>
+				<a href="javascript:;">国家税务总局：3月份纳税申报期限向后延长一周至23日</a>
+				<p>澎湃新闻&nbsp;&nbsp;&nbsp;&nbsp;03-03 17:26</p>
+			</li>
+			<li>
+				<a href="javascript:;">国家税务总局：3月份纳税申报期限向后延长一周至23日</a>
+				<p>澎湃新闻&nbsp;&nbsp;&nbsp;&nbsp;03-03 17:26</p>
+			</li>
+		</ul>
+	</div>
+	<div class="content_right">
+		<h3>实时热点</h3>
+		<ul class="new_right">
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+			<li><a href="javascript:;">长沙一包装厂起火</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
